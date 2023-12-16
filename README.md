@@ -1,0 +1,1 @@
+I tend to start a lot of projects which go nowhere. While it's probably fine to simply delete them, they might contain some interesting ideas to follow up on later. Each folder in this directory is a separate project. Most won't work or are so unimplemented it's barely worth archiving.
