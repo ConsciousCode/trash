@@ -1,0 +1,56 @@
+Data access
+* get
+
+Data changing
+* set
+* del
+
+compend-get path/to/data
+ * Schemas for getting data
+compend-set path/to/data value
+ * Schemas for setting data
+ * Schemas for parsing given value into data type
+
+Program for entering key:value pairs
+Accessing data via URNs
+
+$> compend todo/list
+[ school
+  anime
+  job
+  family
+  anniversary ]
+
+Personal compend requires a database with more types than JSON has
+ * Null
+ * Boolean
+ * Number
+ * String
+ * Array
+ * Object
+ * Reference @:a/b/c, @file:///a/b/c, @http://google.com/
+
+const TOKEN = /(~)|(y)|(n)|(\d+(?:\.\d+))|"((?:[^"]+|\\.)+)"|([\[\]{}:,])
+
+class Parser {
+	constructor(source) {
+		this.source = source;
+		this.pos = 0;
+	}
+	
+	parse() {
+		return this.parseValue);
+	}
+	
+	parseObject() {
+		this.expect("{");
+		
+		let obj = {};
+		while(!this.maybe("}")) {
+			let key = this.source.slice(pos, this.indexOf(":", this.pos));
+			let val = this.parseValue();
+			
+			obj = key[val];
+		}
+	}
+}
